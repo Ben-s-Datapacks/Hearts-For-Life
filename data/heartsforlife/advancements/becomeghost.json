@@ -1,0 +1,33 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:barrier"
+    },
+    "title": "Left on Read",
+    "description": "Lose all your health and become a ghost",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "parent": "heartsforlife:firstdeath",
+  "criteria": {
+    "score": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_scores",
+            "entity": "this",
+            "scores": {
+              "HFL.Total": {
+                "min": 10,
+                "max": 11
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}
